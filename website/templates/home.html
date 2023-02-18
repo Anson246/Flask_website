@@ -24,6 +24,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navr">
       <ul class="navbar-nav justify-content-center">
+
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="/logout" id="logout">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs" id="blogs">Blogs</a>
+        </li>
+        {% else %}
         <li class="nav-item">
           <a class="nav-link" href="/login" id="login">Login</a>
         </li>
@@ -31,14 +40,9 @@
           <a class="nav-link" href="/sign-up" id="sign-up">Sign up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/logout" id="logout">Logout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blogs" id="blogs">Blogs</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/" id="home">Home</a>
         </li>
+        {% endif %}
       </ul>
     </div>
   </nav>
