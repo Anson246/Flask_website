@@ -27,6 +27,13 @@ def login():
     return render_template('login.html')
 
 
+@auth.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('views.home'))
+
+
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def signUp():
     if request.method == 'POST':
