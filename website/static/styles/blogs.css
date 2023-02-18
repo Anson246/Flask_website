@@ -1,0 +1,15 @@
+
+.main{
+  background-color:cadetblue;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.main > span {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0,0,0,0.4);
+}

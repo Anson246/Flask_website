@@ -1,0 +1,26 @@
+{% extends "home.html" %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ url_for('static' , filename='styles/signup.css') }}">
+{% endblock  %}
+
+{% block content  %}
+<div class="main">
+  <form method="POST">
+
+    <div class="form-groups">
+
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="enter email">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="enter username">
+      <label for="password1">Password</label>
+      <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password">
+      <label for="password2">Password (Confirm)</label>
+      <input type="password" class="form-control" id="password2" name="password2" placeholder="Enter the above given password">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock  %}
