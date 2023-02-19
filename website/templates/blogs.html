@@ -5,32 +5,30 @@
 {% endblock  %}
 
 {% block content  %}
+<div class="center-it">
+  <div class="main">
 
-<div class="main">
+    <div class="create-new cont">
+      <a href="/create">New Blog</a>
+    </div>
 
-  <div class="profilec cont">
-    <a href="/profile">My Profile</a>
+    <div class="thread-content cont">
+      <!-- <ul class="list-group list-group-flush" id="blogs-thread"> -->
+
+        {% for note in user.blogper %}
+
+        <div class="blog-container">
+          <header class="blog-title">{{ note.title }}</header>
+          <div class="blog-content">
+            <pre>{{ note.data }}</pre>
+          </div>
+        </div>
+
+        {% endfor %}
+  <!-- 
+      </ul> -->
+
+    </div>
   </div>
-  <div class="thread-content cont">
-    <!-- <ul class="list-group list-group-flush" id="blogs-thread"> -->
-
-      {% for note in user.blogper %}
-
-      <div class="blog-container">
-        <header class="blog-title">{{ note.title }}</header>
-        <div class="blog-content">{{ note.data }}</div>
-      </div>
-
-      {% endfor %}
-<!-- 
-    </ul> -->
-
-
-  </div>
-  <div class="create-new cont">
-    <a href="/create">New Blog</a>
-  </div>
-
 </div>
-
 {% endblock  %}

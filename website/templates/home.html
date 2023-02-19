@@ -18,32 +18,46 @@
 </head>
 <body>  
 
-  <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navr">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navr">
-      <ul class="navbar-nav justify-content-center">
+  <nav class="navbar navbar-expand-xl navbar-dark shadow-5-strong">
+    <div class="container-fluid">
 
-        {% if user.is_authenticated %}
-        <li class="nav-item">
-          <a class="nav-link" href="/logout" id="logout">Logout</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blogs" id="blogs">Blogs</a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="/login" id="login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sign-up" id="sign-up">Sign up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/" id="home">Home</a>
-        </li>
-        {% endif %}
-      </ul>
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-mdb-toggle="collapse"
+        data.mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        <!-- data-toggle="collapse" 
+        data-target="#navr" -->
+        >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navr">
+        <ul class="navbar-nav me-auto mb-2 mg-lg-0">
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="/logout" id="logout">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs" id="blogs">Blogs</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/login" id="login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sign-up" id="sign-up">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/" id="home">Home</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
     </div>
   </nav>
 
