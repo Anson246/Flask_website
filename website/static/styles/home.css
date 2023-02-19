@@ -7,3 +7,48 @@
 }
 
 
+body{
+  background-color: #1A1A1D;
+  background-image: url('../styles/photos/wn.png');
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height:100%;
+}
+
+.content{
+  margin-top: 130px;
+  padding-top: 120px;
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+}
+
+.heading h1{
+  color: #d2c807;
+  padding: 20px;
+  font-size: 50px;
+}
+
+.text p{
+  font-size: large;
+  text-align: center;
+  font-size: 30px;
+  color: #fafeff;
+}
+
+.text2{
+  margin-top: 100px;
+}
+
+.text2 p{
+  color: #d2c807;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Shantell Sans', cursive;
+}
