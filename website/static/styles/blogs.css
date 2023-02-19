@@ -1,15 +1,29 @@
 
 .main{
-  background-color:cadetblue;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-content: center;
    align-items: center;
+   padding: 100px;
 }
 
 
-.main > span {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(0,0,0,0.4);
+.main div {
+  flex: 1;
+}
+
+.cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10px;
+}
+
+.cont a{
+  text-decoration: none;
+  padding: 10px;
+  margin: 2px;
+  color:white;
+  border-radius: 5px;
+  background-color:teal;
 }

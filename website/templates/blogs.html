@@ -8,11 +8,28 @@
 
 <div class="main">
 
-  <span>Hello</span>
-  <span>Hello</span>
-  <span>Hello</span>
-  <span>Hello</span>
-  <span>Hello</span>
+  <div class="profilec cont">
+    <a href="/profile">My Profile</a>
+  </div>
+  <div class="thread-content cont">
+    <!-- <ul class="list-group list-group-flush" id="blogs-thread"> -->
+
+      {% for note in user.blogper %}
+
+      <div class="blog-container">
+        <header class="blog-title">{{ note.title }}</header>
+        <div class="blog-content">{{ note.data }}</div>
+      </div>
+
+      {% endfor %}
+<!-- 
+    </ul> -->
+
+
+  </div>
+  <div class="create-new cont">
+    <a href="/create">New Blog</a>
+  </div>
 
 </div>
 

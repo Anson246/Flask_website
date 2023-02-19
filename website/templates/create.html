@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+
+{% block stylesheet  %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/create.css')  }}">
+{% endblock  %}
+
+{% block content  %}
+
+<form method="POST">
+  <label for="title">Enter the title of your blog</label>
+    <input type="text" class="form-control" id="title" name="title" placeholder="Enter the title">
+  <label for="note">Write below!!</label>  
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <div align="center">
+      <button type="submit" class="btn btn-primary">Add Blog</button>
+    </div>
+</form>
+
+{% endblock  %}
