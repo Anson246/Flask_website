@@ -50,6 +50,9 @@ body{
   background-color:rgb(174, 147, 90);
 }
 
+
+
+
 .thread-content {
   display: flex;
   flex-direction: column;
@@ -60,8 +63,8 @@ body{
   width: 60rem;
   height: 10rem;
   overflow:hidden;
-  background-color:rgba(128, 128, 0, 0.597);
-  padding: 10px;
+  background-color:rgba(199, 182, 88, 0.792);
+  padding: 20px;
   margin:5px 0;
 
 }

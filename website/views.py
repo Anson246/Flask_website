@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
+from sqlalchemy import desc
 from flask_login import login_required, current_user
-from .models import Blog, Blogs
+from .models import Blog
 from . import db
 views = Blueprint('views', __name__)
 
@@ -12,7 +13,7 @@ def home():
 @views.route('/blogs')
 @login_required
 def blogs():
-    blogs = Blog.query.all()
+    blogs = Blog.query.order_by(desc(Blog.date)).all()
     return render_template('blogs.html', user=current_user, blogs = blogs)
 
 @views.route('/create', methods=['GET', 'POST'])
@@ -25,12 +26,10 @@ def create():
         if len(note) < 1:
             flash('Note is too short!', category='error')
         else:
-            new_blog = Blogs()
-            db.session.add(new_blog)
-            db.session.commit()
-            new_note = Blog(data = note, user_id=current_user.id, blog_id = 1, title = title)
+            
+            new_note = Blog(data = note, user_id=current_user.id, title = title)
             db.session.add(new_note)
             db.session.commit()
-            return redirect(url_for('views.blogs'))
+            
         
     return render_template('create.html', user=current_user, blogs = blogs)

@@ -15,7 +15,7 @@
     <div class="thread-content cont">
       <!-- <ul class="list-group list-group-flush" id="blogs-thread"> -->
 
-        {% for note in user.blogper %}
+        <!-- {% for note in user.blogper %}
 
         <div class="blog-container">
           <header class="blog-title">{{ note.title }}</header>
@@ -24,9 +24,21 @@
           </div>
         </div>
 
+        {% endfor %} -->
+        {% for note in blogs %}
+        <!-- {% for t in user %}
+          {% if note.user_id is t.id %}
+            <p>U/{{ t.username }}</p>
+          {% endif %}
+        {% endfor %} -->
+        <div class="blog-container">
+          <header class="blog-title">{{ note.title }}</header>
+          <div class="blog-content">
+            <pre>{{ note.data }}</pre>
+          </div>
+        </div>
+
         {% endfor %}
-  <!-- 
-      </ul> -->
 
     </div>
   </div>
