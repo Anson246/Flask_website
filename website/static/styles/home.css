@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after{
-  font-size: 1.2rem;
+  font-size: 1.1em;
   margin: 0;
   box-sizing: border-box;
 }
@@ -16,6 +16,11 @@ body{
   background-attachment: fixed;
   background-size: cover;
   height:100%;
+}
+
+nav {
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  margin: 15px 30px;
 }
 
 .content{
